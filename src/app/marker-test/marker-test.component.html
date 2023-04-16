@@ -1,0 +1,26 @@
+<aol-feature>
+  <aol-geometry-point>
+    <aol-coordinate  [srid]="'EPSG:4326'" [x]="9.786072"
+                    [y]="4.061536"></aol-coordinate>
+  </aol-geometry-point>
+  <aol-style>
+    <aol-style-icon [anchorOrigin]="'top-left'" [anchor]="[0.5, 0.5]"
+                    [src]="'/assets/images/marker/marker-tracking.svg'"></aol-style-icon>
+  </aol-style>
+  <aol-overlay *ngIf="overlay">
+    <aol-coordinate  [srid]="'EPSG:4326'" [x]="9.786072"
+                    [y]="4.061536">
+    </aol-coordinate>
+    <aol-content>
+      <div class="ol-popup" style="display: block;">
+        <div class="ol-popup-closer">
+          <mat-icon (click)="closeOverlay()" aria-hidden="false">close</mat-icon>
+        </div>
+        <div class="ol-popup-content">
+          <div>
+          </div>
+        </div>
+      </div>
+    </aol-content>
+  </aol-overlay>
+</aol-feature>
